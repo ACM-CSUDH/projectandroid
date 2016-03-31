@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My first app! Let's make it a good one!~"
+        android:text="Our first app! Let&apos;s make it a good one!~"
         android:layout_marginTop="204dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
