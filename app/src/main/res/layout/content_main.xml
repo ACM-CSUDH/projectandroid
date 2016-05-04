@@ -19,16 +19,21 @@
         android:layout_marginTop="204dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView" />
+        android:id="@+id/textView1" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next Page"
         android:id="@+id/button"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="92dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pick time"
+        android:onClick="showTimePickerDialog" />
 
     <ImageView
         android:layout_width="150dp"
