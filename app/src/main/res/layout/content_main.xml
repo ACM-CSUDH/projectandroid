@@ -15,33 +15,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Our first app! Let&apos;s make it a good one!~"
-        android:layout_marginTop="204dp"
+        android:text="ACM@CSUDH Countdown"
+        android:id="@+id/textView1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView1" />
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Page"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="92dp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="pick time"
-        android:onClick="showTimePickerDialog" />
+        android:text="@string/pick_time_button"
+        android:onClick="showTimePickerDialog"
+        android:id="@+id/button2"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="73dp"
-        android:src="@mipmap/dhlogo" />
+        android:src="@mipmap/dhlogo"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

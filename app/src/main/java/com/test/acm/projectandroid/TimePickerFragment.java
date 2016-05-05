@@ -24,7 +24,6 @@ public class TimePickerFragment extends DialogFragment
         final Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
-        System.out.println("Omg it worked 1");
 
         // Create a new instance of TimePickerDialog and return it
         return new TimePickerDialog(getActivity(), this, hour, minute,
@@ -34,8 +33,15 @@ public class TimePickerFragment extends DialogFragment
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         // Do something with the time chosen by the user
         TextView tv1 = (TextView) getActivity().findViewById(R.id.textView1);
-        tv1.setText("Hour: " + view.getCurrentHour() + "Minute: " + view.getCurrentMinute());
-        System.out.println("Omg it worked 2");
+        int hour = 0;
+        int min = 0;
+
+        int currentApiVersion = android.os.Build.VERSION.SDK_INT;
+        if (currentApiVersion > android.os.Build.VERSION_CODES.LOLLIPOP_MR1){
+            tv1.setText("Hour: " + view.getHour() + "Minute: " + view.getMinute());
+        } else {
+            tv1.setText("Hour: " + view.getCurrentHour() + "Minute: " + view.getCurrentMinute());
+        }
     }
 
 

@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button nextPage = (Button) findViewById(R.id.button);
-        nextPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-                    public void onClick(View v) {
-                goToSecondActivity();
-            }
-        });
+        //Button nextPage = (Button) findViewById(R.id.button2);
+        //nextPage.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+         //           public void onClick(View v) {
+         //       goToSecondActivity();
+         //   }
+        //});
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
     public void showTimePickerDialog(View v) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
-        System.out.println("Omg it worked 3");
     }
 
     private void goToSecondActivity() {
