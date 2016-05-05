@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -20,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button nextPage = (Button) findViewById(R.id.button);
-        nextPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-                    public void onClick(View v) {
-                goToSecondActivity();
-            }
-        });
+        //Button nextPage = (Button) findViewById(R.id.button2);
+        //nextPage.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+         //           public void onClick(View v) {
+         //       goToSecondActivity();
+         //   }
+        //});
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "timePicker");
     }
 
     private void goToSecondActivity() {
