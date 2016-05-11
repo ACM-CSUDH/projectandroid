@@ -20,15 +20,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pick_time_button"
-        android:onClick="showTimePickerDialog"
-        android:id="@+id/button2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -37,5 +28,25 @@
         android:layout_marginTop="24dp"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_time_button"
+        android:onClick="showTimePickerDialog"
+        android:id="@+id/timePickButton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_date_button"
+        android:onClick="showDatePickerDialog"
+        android:id="@+id/datePickButton"
+        android:layout_below="@+id/timePickButton"
+        android:layout_alignLeft="@+id/timePickButton"
+        android:layout_alignStart="@+id/timePickButton"
+        android:layout_marginTop="48dp" />
 
 </RelativeLayout>

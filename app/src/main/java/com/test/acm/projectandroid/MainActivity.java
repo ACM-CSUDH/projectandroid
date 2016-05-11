@@ -21,22 +21,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Button nextPage = (Button) findViewById(R.id.button2);
-        //nextPage.setOnClickListener(new View.OnClickListener() {
-         //   @Override
-         //           public void onClick(View v) {
-         //       goToSecondActivity();
-         //   }
-        //});
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
     }
 
     @Override
@@ -61,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void showDatePickerDialog(View v) {
+        DialogFragment newDateFragment = new TimePickerFragment();
+        newDateFragment.show(getSupportFragmentManager(), "datePicker");
+    }
     public void showTimePickerDialog(View v) {
-        DialogFragment newFragment = new TimePickerFragment();
-        newFragment.show(getSupportFragmentManager(), "timePicker");
+        DialogFragment newTimeFragment = new TimePickerFragment();
+        newTimeFragment.show(getSupportFragmentManager(), "timePicker");
     }
 
-    private void goToSecondActivity() {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    }
 }
